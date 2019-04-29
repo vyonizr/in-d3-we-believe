@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    }
+    div.tooltip {
+        position: absolute;
+        text-align: left;
+        width: auto;
+        padding: 5px;
+        font: 1rem sans-serif;
+        background: lightyellow;
+        border: 0px;
+        border-radius: 2px;
+        pointer-events: none;
+    }
+    .label {
+      font-size: 1.5rem;
+    }
+    #spotify-link {
+      color: #1DB954;
+    }
+  </style>
+  <title>Valence of 2018's Top 50 Spotify Tracks</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div data-aos="fade-down">
+          <h3>Valence of 2018's Top 50 Spotify Tracks</h3>
+        </div>
+      </div>
+      <div class="col s12" style="width: 1000">
+        <div data-aos="fade-right" data-aos-delay="300">
+          <h5>The valence of a song is defined by <a id="spotify-link" href="https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/" target="_blank">Spotify</a> as: </h5>
+        </div>
+        <div data-aos="fade-right" data-aos-delay="400">
+          <blockquote><em>A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</em></blockquote>
+        </div>
+      </div>
+    </div>
+    <div class="row" data-aos="zoom-in-up" data-aos-delay="600">
+      <svg width="1000" height="700"/>
+    </div>
+  </div>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="dataset.js"></script>
+  <script src="index.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
